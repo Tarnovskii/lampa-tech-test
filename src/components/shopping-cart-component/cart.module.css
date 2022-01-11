@@ -1,0 +1,15 @@
+.open_wrapper {
+  position: absolute;
+  width: 60%;
+  background: aqua;
+  min-height: 200px;
+  max-height: 400px;
+  top: 100%;
+  right: 0;
+}
+
+.close_wrapper {
+  display: none;
+}
+
+/*# sourceMappingURL=cart.module.css.map */
