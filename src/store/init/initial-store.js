@@ -3,5 +3,8 @@ export const initialStore = {
         isFetching: true,
         error: {},
         productsList: []
+    },
+    cartState: {
+        totalPrice: 0,
     }
 }

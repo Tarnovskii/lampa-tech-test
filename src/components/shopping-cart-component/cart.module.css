@@ -1,15 +1,12 @@
-.open_wrapper {
-  position: absolute;
+.wrapper {
   width: 60%;
-  background: aqua;
-  min-height: 200px;
-  max-height: 400px;
-  top: 100%;
-  right: 0;
 }
 
-.close_wrapper {
-  display: none;
+.products_list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  flex: 0 0 70%;
 }
 
 /*# sourceMappingURL=cart.module.css.map */

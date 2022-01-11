@@ -15,7 +15,7 @@ const Content = props => {
     }, [])
 
     const productsListMapper = () => {
-        return productsState.productsList.map(productData =>  <ProductTile productData={productData}/>)
+        return productsState.productsList.map(productData =>  <ProductTile cart={false} productData={productData}/>)
     }
 
     return (

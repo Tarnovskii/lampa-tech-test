@@ -2,9 +2,11 @@ import {applyMiddleware, combineReducers, compose, createStore} from "redux";
 import {initialStore} from "./initial-store.js";
 import thunk from "redux-thunk";
 import {productsState} from "../reducers/products-reducer";
+import {cartState} from "../reducers/cart-reducer";
 
 const reducers = combineReducers({
-    productsState: productsState,
+    productsState,
+    cartState,
 });
 
 const composeSetup = process.env.NODE_ENV !== 'production' && typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
