@@ -1,5 +1,44 @@
+$tile-height: 27rem;
+$image-height: 18rem;
+$details-height: $tile-height - $image-height;
+
 .wrapper {
-  flex: 0 0 20rem;
-  height: 25rem;
-  background: green;
+  width: 20rem;
+  height: $tile-height;
+  box-shadow: 1px 1px 3px rgba(black, 0.3);
+  background: white;
+  transition: 0.3s all;
+
+  &:hover {
+    box-shadow: 3px 3px 4px rgba(black, 0.4);
+  }
+
+  img {
+    width: 100%;
+    height: $image-height;
+    object-fit: cover;
+  }
+
+
+}
+
+.details {
+  height: $details-height;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+  p {
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  button {
+    margin-top: auto;
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
 }
