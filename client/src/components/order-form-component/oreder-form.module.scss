@@ -1,0 +1,35 @@
+.wrapper {
+  position: sticky;
+  top: 6rem;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  flex: 1 0 auto;
+  padding: 1rem;
+  background: white;
+  box-shadow: 1px 1px 3px rgba(black, .4);
+
+  input, input::placeholder, button {
+    font-weight: bold;
+  }
+
+  input:focus {
+    outline: 1px solid black;
+  }
+
+  input, button {
+    border: 1px solid grey;
+    padding: 0.5rem 1rem;
+  }
+
+  button {
+    cursor: pointer;
+    color: black;
+
+    &:disabled {
+      color: rgba(grey, 0.5);
+      border: 1px solid rgba(gray, 0.2);
+    }
+  }
+}

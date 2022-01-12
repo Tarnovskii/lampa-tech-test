@@ -1,4 +1,9 @@
-import {addProductToCart, getTotalProductsPrice, removeProductFromCart} from "../../utils/cart-manager";
+import {
+    addProductToCart,
+    clearCartProductsArrayInCookie,
+    getTotalProductsPrice,
+    removeProductFromCart
+} from "../../utils/cart-manager";
 
 export const pushProductToCart = product => {
     addProductToCart(product)
@@ -12,4 +17,9 @@ export const popProductFromCart = id => {
 
 export const initCartFromCookies = () => {
     return {type: '[CART] INIT_CART_TOTAL_PRICE_FROM_COOKIES', value: getTotalProductsPrice()}
+}
+
+export const clearCart = () => {
+    clearCartProductsArrayInCookie();
+    return {type: '[CART] RESET_TOTAL_PRICE'}
 }

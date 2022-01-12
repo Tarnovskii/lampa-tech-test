@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 
-import {fetchProductsList} from "../../store/action-creators/products-actions";
+import {fetchProductsList} from "../../store/actions/products-actions";
 
 import s from './content.module.css'
 import ProductTile from "../product-tile-component/ProductTile";

@@ -6,6 +6,8 @@ export const cartState = (state = {}, action) =>{
             return {...state, totalPrice: state.totalPrice - action.value}
         case '[CART] INIT_CART_TOTAL_PRICE_FROM_COOKIES':
             return {...state, totalPrice: action.value}
+        case '[CART] RESET_TOTAL_PRICE':
+            return {...state, totalPrice: 0}
         default: return state
     }
 }

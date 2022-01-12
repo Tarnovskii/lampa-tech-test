@@ -17,7 +17,7 @@ export const addProductToCart = (product) => {
         }
         else document.cookie = `cart_content=${JSON.stringify([...productsArray, {...product, count: 1}])}`
     } catch (e) {
-        console.error(e)
+        clearCartProductsArrayInCookie()
     }
 }
 
@@ -36,7 +36,7 @@ export const removeProductFromCart = productId => {
             document.cookie = `cart_content=${JSON.stringify(productsArray)}`
         }
     } catch (e) {
-        console.error(e)
+        clearCartProductsArrayInCookie()
     }
 }
 
@@ -47,15 +47,17 @@ export const getTotalProductsPrice = () => {
 }
 
 export const getCartProductsArrayFromCookie = () => {
-    if (document.cookie.indexOf('cart_content') === -1) document.cookie = 'cart_content=[]'
+    if (document.cookie.indexOf('cart_content') === -1) clearCartProductsArrayInCookie()
 
     try {
         return JSON.parse(document.cookie.split('; ').find(cookieString => {
             return (cookieString.split('=')[0] === 'cart_content')
         }).split('=')[1])
     } catch (e) {
-        console.error(e)
+        clearCartProductsArrayInCookie()
     }
 }
+
+export const clearCartProductsArrayInCookie = () => document.cookie = 'cart_content=[]'
 
 

@@ -2,18 +2,17 @@ import React, {useEffect, useState} from 'react'
 
 import s from './cart.module.css'
 import {getCartProductsArrayFromCookie} from "../../utils/cart-manager";
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import ProductTile from "../product-tile-component/ProductTile";
+import OrderForm from "../order-form-component/OrderForm";
 
 const ShoppingCart = props => {
     const totalPrice = useSelector(store => store.cartState.totalPrice)
-    const dispatch = useDispatch()
     const [productsArray, updateProductsArray] = useState([])
 
     useEffect(() => {
         updateProductsArray(getCartProductsArrayFromCookie())
     }, [totalPrice])
-
 
     const productsListMapper = () => {
         return productsArray.map(productData => <ProductTile cart={true} productData={productData}/> )
@@ -25,9 +24,7 @@ const ShoppingCart = props => {
                 {productsListMapper()}
                 <u>Total: {totalPrice} $</u>
             </div>
-            <div className={s.request_form}>
-
-            </div>
+            <OrderForm totalPrice={totalPrice}/>
         </section>
     )
 }
