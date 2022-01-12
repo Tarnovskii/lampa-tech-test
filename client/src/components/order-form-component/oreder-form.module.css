@@ -1,0 +1,32 @@
+.wrapper {
+  position: sticky;
+  top: 6rem;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  flex: 1 0 auto;
+  padding: 1rem;
+  background: white;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+.wrapper input, .wrapper input::placeholder, .wrapper button {
+  font-weight: bold;
+}
+.wrapper input:focus {
+  outline: 1px solid black;
+}
+.wrapper input, .wrapper button {
+  border: 1px solid grey;
+  padding: 0.5rem 1rem;
+}
+.wrapper button {
+  cursor: pointer;
+  color: black;
+}
+.wrapper button:disabled {
+  color: rgba(128, 128, 128, 0.5);
+  border: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+/*# sourceMappingURL=oreder-form.module.css.map */
