@@ -1,6 +1,5 @@
 import React, {Fragment} from 'react'
 import Header from "./components/header-component/Header";
-import Footer from "./components/footer-component/Footer";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 
@@ -17,7 +16,6 @@ const Application = props => {
                     <Route path={'/cart'} element={<ShoppingCart/>}/>
                 </Routes>
             </React.Suspense>
-            <Footer/>
         </BrowserRouter>
     )
 }
